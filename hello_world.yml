@@ -1,6 +1,7 @@
-- name: Hello World Sample
-  hosts: all
-  tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World GITHUB!"
+- name: Getting the definition of awesome
+      uri:
+        url: https://api.chucknorris.io/jokes/random
+        method: GET
+      register: results
+  - debug:
+        var: results
