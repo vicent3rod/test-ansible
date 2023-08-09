@@ -4,4 +4,5 @@
     - name: Confirm that 200 OK response is returned
       uri:
         url: "https://tts.service-now.com//api/tcdps/incident_rest_demo/getinc/b61f5f4c1bac31908fd7404be54bcb38"
-        status_code: 404
+        method: GET
+        status_code: 202
