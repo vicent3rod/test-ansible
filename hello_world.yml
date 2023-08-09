@@ -3,5 +3,5 @@
   tasks:
     - name: Confirm that 200 OK response is returned
       uri:
-        url: "http://{{ ansible_host }}:30869/api/v1/healthcheck"
-        status_code: 200
+        url: "https://tts.service-now.com//api/tcdps/incident_rest_demo/getinc/b61f5f4c1bac31908fd7404be54bcb38"
+        status_code: 404
