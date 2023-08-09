@@ -1,10 +1,12 @@
 ---
 - hosts: all
   tasks:
-    - name: Confirm that 200 OK response is returned
+    - debug:
+        msg: "Let’s call an API"
+    - name: Testing ServiceNow
       uri:
         url: "https://tts.service-now.com//api/tcdps/incident_rest_demo/getinc/b61f5f4c1bac31908fd7404be54bcb38"
         method: GET
-        register: results
+      register: results
     - debug:
-        var: results
+        var: results.json.value
